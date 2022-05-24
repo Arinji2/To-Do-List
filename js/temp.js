@@ -29,7 +29,7 @@ function addTodo(item) {
 
     // then add it to todos array
     todos.push(todo);
-    addToLocalStorage(todos); // then store it in localStorage
+    addTosessionStorage(todos); // then store it in sessionStorage
 
     // finally clear the input box value
     todoInput.value = '';
@@ -44,19 +44,16 @@ function renderTodos(todos) {
   // run through each item inside todos
   todos.forEach(function(item) {
     // check if the item is completed
-    const checked = item.completed ? 'checked': null;
+    const checked = item.completed ? 'checked': null; //if item.completed is true, value of checked is true else value is null
 
     // make a <li> element and fill it
     // <li> </li>
     const li = document.createElement('li');
     // <li class="item"> </li>
     li.setAttribute('class', 'item');
-    // <li class="item" data-key="20200708"> </li>
+    // <li class="item"> </li>
     li.setAttribute('data-key', item.id);
     /* <li class="item" data-key="20200708"> 
-          <input type="checkbox" class="checkbox">
-          Go to Gym
-          <button class="delete-button">X</button>
         </li> */
     // if item is completed, then add a class to <li> called 'checked', which will add line-through style
     if (item.completed === true) {
@@ -75,16 +72,16 @@ function renderTodos(todos) {
 }
 
 // function to add todos to local storage
-function addToLocalStorage(todos) {
+function addTosessionStorage(todos) {
   // conver the array to string then store it.
-  localStorage.setItem('todos', JSON.stringify(todos));
+  sessionStorage.setItem('todos', JSON.stringify(todos));
   // render them to screen
   renderTodos(todos);
 }
 
 // function helps to get everything from local storage
-function getFromLocalStorage() {
-  const reference = localStorage.getItem('todos');
+function getFromsessionStorage() {
+  const reference = sessionStorage.getItem('todos');
   // if reference exists
   if (reference) {
     // converts back to array and store it in todos array
@@ -103,10 +100,10 @@ function toggle(id) {
     }
   });
 
-  addToLocalStorage(todos);
+  addTosessionStorage(todos);
 }
 
-// deletes a todo from todos array, then updates localstorage and renders updated list to screen
+// deletes a todo from todos array, then updates sessionStorage and renders updated list to screen
 function deleteTodo(id) {
   // filters out the <li> with the id and updates the todos array
   todos = todos.filter(function(item) {
@@ -114,12 +111,12 @@ function deleteTodo(id) {
     return item.id != id;
   });
 
-  // update the localStorage
-  addToLocalStorage(todos);
+  // update the sessionStorage
+  addTosessionStorage(todos);
 }
 
-// initially get everything from localStorage
-getFromLocalStorage();
+// initially get everything from sessionStorage
+getFromsessionStorage();
 
 // after that addEventListener <ul> with class=todoItems. Because we need to listen for click event in all delete-button and checkbox
 todoItemsList.addEventListener('click', function(event) {
