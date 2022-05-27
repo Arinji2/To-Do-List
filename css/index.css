@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500&display=swap"); /*Title*/
+html {
+	scroll-behavior: smooth;
+}
 body {
 	margin: 0;
 
@@ -28,7 +30,13 @@ body {
 	color: #94aab0;
 	display: block;
 }
-
+.difference {
+	position: relative;
+	bottom: 50px;
+	color: #0a3e4a;
+	font-family: "Spline Sans Mono", monospace;
+	text-decoration: none;
+}
 a {
 	color: #94aab0;
 	text-decoration: none;

@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500&display=swap"); /*Title*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap"); /*Return*/
+
 /* common styles */
 * {
 	padding: 0;
 	margin: 0;
 }
-
+html {
+	scroll-behavior: smooth;
+}
 body {
 	margin: 0;
 
@@ -23,7 +28,7 @@ body {
 		hsl(0deg 4% 46%) 100%
 	);
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-attachment: fixed;
 }
 
 button:hover {
@@ -47,8 +52,10 @@ ul {
 }
 
 h1 {
-	color: #fff;
+	color: #414c4f;
 	font-size: 3rem;
+	font-family: "Spline Sans Mono", monospace;
+	padding-bottom: 30px;
 }
 
 /* todo-form */
@@ -65,6 +72,7 @@ h1 {
 	padding: 10px;
 	margin-right: 10px;
 	font-size: 1rem;
+	background-color: lightblue;
 }
 
 .add-button {
@@ -124,10 +132,17 @@ h1 {
 .checked {
 	text-decoration: line-through;
 }
-
-/* todo-items style ends */
-
-/* container style ends */
+.Return {
+	color: #414c4f;
+	font-size: 20px;
+	padding-top: 30px;
+	font-family: "Source Sans Pro", sans-serif;
+	text-decoration: none;
+}
+.Return:hover {
+	transform: scale(1.5);
+	cursor: pointer;
+}
 
 @media only screen and (max-width: 600px) {
 	h1 {
