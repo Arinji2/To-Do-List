@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>LMS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>To Do List</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 	</head>
 	<body>
+		<h1 class="heading">The To Do List Home Page</h1>
 		<div id="allTheThings">
-			<div id="member">
+			<div id="temporary">
 				<a href="temp.html">
 					<img src="images/clock.png" width="250px" height="auto" /><br />
 					&nbsp;Temporary List
 				</a>
 			</div>
 			<div id="verticalLine">
-				<div id="librarian">
-					<a id="librarian-link" href="perm.html">
+				<div id="permanent">
+					<a href="perm.html">
+						<img src="images/lock.png" width="250px" height="auto;" /><br />
+						&nbsp;Permanent List
+					</a>
+				</div>
+				<div id="permanent-mobile">
+					<a href="perm.html">
 						<img
-							src="images/lock-icon.png"
+							class="permanent-mobile"
+							src="images/lock-mobile.png"
 							width="250px"
 							height="auto;"
 						/><br />
-						&nbsp;&nbsp;&nbsp;Permanent List
+						&nbsp;
+						<p class="permanent-mobile-text">Permanent List</p>
 					</a>
 				</div>
 			</div>
