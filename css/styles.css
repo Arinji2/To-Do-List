@@ -33,7 +33,6 @@ body {
 
 button:hover {
 	cursor: pointer;
-	background-color: coral;
 }
 
 ul {
@@ -76,7 +75,7 @@ h1 {
 }
 
 .add-button {
-	background-color: #0000ff;
+	background-color: #343642;
 	color: #fff;
 	border: none;
 	outline: none;
@@ -114,6 +113,7 @@ h1 {
 
 .checkbox {
 	margin-right: 10px;
+	cursor: pointer;
 }
 
 .delete-button {

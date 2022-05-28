@@ -75,7 +75,26 @@ a {
 .permanent-mobile-text {
 	display: none;
 }
+.section {
+	color: #94aab0;
+	font-family: "Spline Sans Mono", monospace;
+	border: 10px solid #343642;
+	position: relative;
+	top: 50px;
+}
+.section-heading {
+	color: #343642;
+}
 @media only screen and (max-width: 600px) {
+	.heading {
+		color: #68a2b1;
+	}
+	.difference {
+		color: #94aab0;
+	}
+	.difference a {
+		text-decoration: solid underline #68a2b1;
+	}
 	#verticalLine {
 		border-top: solid #343642;
 		border-left: solid transparent;
@@ -94,7 +113,7 @@ a {
 	}
 	.permanent-mobile-text {
 		position: relative;
-		bottom: 120px;
+		bottom: 100px;
 		right: 10px;
 	}
 }
